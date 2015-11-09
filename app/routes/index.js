@@ -3,14 +3,13 @@ import $ from 'jquery';
 
 export default Ember.Route.extend({
   model: function() {
-    var data = {};
-    data.topStories = $.getJSON("https://hacker-news.firebaseio.com/v0/topstories.json").then(function(response) {
-      var items = [];
-      response.forEach( function (item) {
-        items.push(item);
-      });
+    var data = $.getJSON("https://hacker-news.firebaseio.com/v0/topstories.json").done(function(response) {
+        var items = [];
+        response.forEach( function (item) {
+          items.push(item);
+        });
 
-      return items;
+        return items;
     });
 
     console.log(data);
