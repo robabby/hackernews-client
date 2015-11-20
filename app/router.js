@@ -6,8 +6,13 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('index', { path : '/' });
+
   this.route('register');
+
+  this.route('stories', function() {
+    this.route('top');
+    this.route('new');
+  });
 });
 
 export default Router;
