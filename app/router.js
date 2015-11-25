@@ -9,7 +9,7 @@ Router.map(function() {
 
   this.route('register');
 
-  this.route('stories', function() {
+  this.route('stories', { path: '/' }, function() {
     this.route('top');
     this.route('new');
   });
