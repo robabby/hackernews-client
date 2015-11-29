@@ -1,8 +1,12 @@
-<nav>
-  {{#link-to 'application'}}Home{{/link-to}}
-  {{#link-to 'stories.top'}}Top Stories{{/link-to}}
-  {{#link-to 'stories.new'}}Newest Stories{{/link-to}}
-  {{#link-to 'register'}}Register{{/link-to}}
-</nav>
+<div class="container-fluid">
+  <nav class="col-sm-12">
+    {{#link-to 'application'}}Home{{/link-to}}
+    {{#link-to 'stories.top'}}Top Stories{{/link-to}}
+    {{#link-to 'stories.new'}}Newest Stories{{/link-to}}
+    {{#link-to 'register'}}Register{{/link-to}}
+  </nav>
 
-{{outlet}}
+  <div class="col-sm-12">
+    {{outlet}}
+  </div>
+</div>
