@@ -1,1 +1,21 @@
-{{outlet}}
+<div>
+  <div class="col-md-3">
+    <h2>Notebooks</h2>
+    <div>
+      title {{input value=title}}
+      <button {{action 'addNotebook'}}>Add</button>
+    </div>
+    <div>
+      <ul>
+        {{#each model as |notebook|}}
+          {{#link-to 'notebooks.notes' notebook.id}}
+            <li>{{notebook.title}}</li>
+          {{/link-to}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-9">
+    {{outlet}}
+  </div>
+</div>
