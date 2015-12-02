@@ -13,7 +13,9 @@ Router.map(function() {
     this.route('new');
   });
   this.route('login');
-  this.route('notebooks', { path: 'notebooks/:user_id' }, function() {});
+  this.route('notebooks', { path: 'notebooks/:user_id' }, function() {
+    this.route('notes', { path: 'notes/:notebook_id' }, function() {});
+  });
 });
 
 export default Router;
