@@ -1,10 +1,8 @@
 module.exports = function(app) {
   var express = require('express');
   var notebooksRouter = express.Router();
-
   var bodyParser = require('body-parser');
   app.use(bodyParser.json());
-
   var nedb = require('nedb');
   var notebookDB = new nedb({ filename: 'notebooks', autoload: true });
 
